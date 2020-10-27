@@ -1,6 +1,6 @@
 import pandas as pd
 
-from santepublique.visus import (plotevol, plotnouveauxcas, plotevoltestsreg,
+from ui.visus import (plotevol, plotnouveauxcas, plotevoltestsreg,
                                  plotevolreg)
 
 

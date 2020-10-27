@@ -25,9 +25,9 @@ from PyQt5.QtWidgets import QAction, QSizePolicy, QAbstractItemView, QRadioButto
 from PyQt5.QtGui import QIcon, QPixmap, QColor, QPalette
 from PyQt5.QtCore import Qt
 
-from santepublique.tablemodel import ModeleTab
-from santepublique.localisation import Departement, Region, Pays
-from santepublique.utilities import (ressource_path, readcsv, extrairedata,
+from ui.tablemodel import ModeleTab
+from localisation import Departement, Region, Pays
+from common.utilities import (ressource_path, readcsv, extrairedata,
                                      dateformat)
 
 
@@ -37,7 +37,7 @@ class CovidVisu(QMainWindow):
         self.pathapp = os.path.dirname(ressource_path(''))
         self.pathicones = ressource_path('icones')
         self.pathappdata = ressource_path('data')
-        loadUi(ressource_path('.\\UICovid19.ui'), self)
+        loadUi(ressource_path('ui\\UICovid19.ui'), self)
 
         # Read the file urls.cfg which provides infos on data
         self.data = self.__lireurl(os.path.join(self.pathappdata,
